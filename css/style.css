@@ -24,6 +24,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  position: relative;
 }
 
 header, footer, section {
@@ -52,6 +53,22 @@ header, footer, section {
   color: #24ba9f;
 }
 
+.description {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgba(255,255,255, 0.5);
+    margin-top: 40%;
+}
+
+.description_titles {
+    border-bottom: 5px solid #24ba9f;
+    font-size: 1.3em;
+    line-height: 40px;
+    margin: 15px 0 25px 10px;
+    font-weight: 500;
+
+}
 /* HEADER */
 
 body > header {
@@ -199,7 +216,132 @@ nav ul.submenu span:after {
 }
 /* SECTION PRODUCTS */
 
+.product_img_box {
+    width: 31%;
+    height: 200px;
+    position: relative;
+    /*position: absolute;*/
+    display: inline-block;
+    margin: 30px 20px 30px 0;
+}
+
+.first_img, .second_img {
+    background-size: cover;
+    background-position: center;
+}
+
+.first_img {
+    background-image: url("../images/box1_img.jpg");
+}
+
+.second_img {
+    background-image: url("../images/box2_img.jpg");
+}
+
+.product_frame {
+    border: 1px solid;
+    border-color: rgba(0,0,0,0.3);
+    width: 31%;
+    height: 200px;
+    display: inline-block;
+    margin: 30px 0 30px 0;
+    padding: 10px 20px 20px 20px;
+    vertical-align: top;
+}
+
+.product_frame p {
+    line-height: 16px;
+    margin-bottom: 15px;
+
+}
 
 /* SECTION OFFER */
+
+#offer {
+    background-color: #f2f2f2;
+    height: 800px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* wrappery*/
+.wrapper {
+  width: 31%;
+  height: 380px;
+  position: relative;
+  position: absolute;
+  border: 2px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: sans-serif;
+  display: inline-block;
+
+}
+
+.circleEmpty {
+  width: 60px;
+  height: 60px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: relative;
+  position:absolute;
+  background-color: white;
+  margin: auto;
+  top: -380px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.circleFull {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  position: absolute;
+}
+
+.wrapper h1 {
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-top: 60px;
+}
+
+.circle_price {
+    border: 2px solid grey;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.wrapper p {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-weight: 200;
+}
+
+.wrapper a {
+  display: inline-block;
+  background-color: black;
+  padding: 0 20px;
+  color: white;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 /* SECTION */
