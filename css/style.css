@@ -51,6 +51,7 @@ header, footer, section {
 
 .highlighted {
   color: #24ba9f;
+  font-weight: 700;
 }
 
 .description {
@@ -78,7 +79,7 @@ body > header {
 
 header a {
   color: white;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 30px;
 }
 
@@ -87,11 +88,9 @@ header a {
   font-size: 14px;
 }
 
-
 nav >ul {
   position: relative;
 }
-
 
 nav > ul > li {
   padding-right: 20px;
@@ -142,8 +141,6 @@ nav>ul li:hover .submenu {
   display:block;
 }
 
-
-
 nav ul.submenu span:after {
 /* trójkącik*/
 }
@@ -154,7 +151,6 @@ nav ul.submenu span:after {
   background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0) 75%,rgba(0,0,0,0.15) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0) 75%,rgba(0,0,0,0.15) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#3b000000',GradientType=0 ); /* IE6-9 */
-
 }
 
 .slider {
@@ -206,7 +202,6 @@ nav ul.submenu span:after {
   height: 70px;
   margin-top: 12%;
   position: absolute;
-
 }
 
 .arrow {
@@ -214,8 +209,6 @@ nav ul.submenu span:after {
    line-height: 70px;
 }
 /* SECTION PRODUCTS */
-
-
 .product_img_box {
     width: 32%;
     height: 200px;
@@ -253,7 +246,6 @@ nav ul.submenu span:after {
     vertical-align: top;
 }
 
-
 .product_frame .description_titles {
     width: 60%;
     margin-left: 0;
@@ -264,9 +256,7 @@ nav ul.submenu span:after {
     margin-bottom: 15px;
 }
 
-
 /* SECTION OFFER */
-
 #offer {
     background-color: hsl(0, 0%, 95%);
     height: 630px;
@@ -286,13 +276,11 @@ nav ul.submenu span:after {
     margin-right: 21px;
 }
 
-
-
 .wrapper {
   width: 100%;
   height: 480px;
   position: relative;
-  border: 2px solid lightgrey;
+  border: 2px solid #bfbfbf;
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
@@ -304,13 +292,12 @@ nav ul.submenu span:after {
 .wrapper:hover {
     border: 2px solid #24ba9f;
     background-color: #24ba9f;
-
 }
 
 .circleEmpty {
   width: 60px;
   height: 60px;
-  border: 2px solid lightgrey;
+  border: 2px solid #bfbfbf;
   border-radius: 50%;
   position: relative;
   position:absolute;
@@ -321,15 +308,11 @@ nav ul.submenu span:after {
   left: 0;
   right: 0;
 }
-.cirleEmpty:hover {
-    border: 2px solid #24ba9f;
-    background-color: #24ba9f;
-}
 
 .circleFull {
   width: 30px;
   height: 30px;
-  background-color: lightgray;
+  background-color: #bfbfbf;
   border-radius: 50%;
   margin: auto;
   top: 0;
@@ -349,26 +332,34 @@ nav ul.submenu span:after {
 }
 
 .circle_price {
-    border: 2px solid lightgrey;
+    border: 2px solid #a6a6a6;
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    background-color: rgba(255,255,255, 0.3);
+    height: 120px;
+    width: 120px;
+    background-color: white ;
     /*position: absolute;*/
     margin: 0 auto;
+    padding: 30px 0 10px 0;
+    color: #a6a6a6;
 }
 
 .circle_price p {
-    color: lightgrey;
-    font-size: 1rem;
+    color: #a6a6a6;
+    font-size: 1.5rem;
     text-transform: uppercase;
+    margin-top: -10px;
+}
+
+.circle_price sub {
+    vertical-align: top;
+    font-size: 1.4rem;
 }
 
 .wrapper p {
     width: 100%;
     line-height: 30px;
-    font-size: 1rem;
-    color: lightgrey;
+    font-size: 1.1rem;
+    color: #a6a6a6;
 }
 
 .wrapper a {
@@ -396,7 +387,7 @@ nav ul.submenu span:after {
 .wrapper ul li {
     line-height: 35px;
     font-size: 1.4rem;
-    color: #a6a6a6;
+    color: #999999;
     text-align: center;
     background-color: #f2f2f2;
 }
@@ -405,20 +396,45 @@ nav ul.submenu span:after {
     background-color: #e6e6e6;
 }
 .text_big {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: Arial;
     padding-top: 20px;
+    font-weight: bold;
 }
 
-sub {
-    font-size: 1.5rem;
+/* wrapper hover*/
+.offer_box:hover a {
+    background-color: white;
+    color: #24ba9f;
+}
+
+.offer_box:hover .circleEmpty {
+    border: 2px solid #24ba9f;
+    background-color: #24ba9f;
+}
+
+.offer_box:hover .circleFull {
+    background-color: white;
+}
+
+.offer_box:hover .circle_price {
+    border-color: white;
+    color: #24ba9f;
+}
+
+.offer_box:hover h3 {
+    color: white;
+}
+
+.offer_box:hover p {
+    color: #24ba9f;
 }
 /* SECTION contact*/
 #contact {
     width: 100%;
     background-color: white;
     padding-top: 15px;
-    height: 650px;
+    height: 380px;
 }
 
 #contact .description_titles {
@@ -426,6 +442,124 @@ sub {
     margin-left: 0;
 }
 
-form>div {
+.form_left {
+    width: 60%;
+    float: left;
+    height: 300px;
+}
+
+.form_right {
+    width: 38%;
+    height: 300px;
+    float: right;
+    padding-left: 20px;
+}
+
+input[type=text], input[type=email], textarea {
+    border: 1px solid #24ba9f;
+    border-radius: 2%;
+    width: 100%;
+    margin: 10px 0;
+    font-family: inherit;
+    font-size: 1.4rem;
+    padding-left: 10px;
+}
+
+input[type=text], input[type=email] {
+    height: 40px;
+}
+
+input[type=text] {
+    margin-top: 30px;
+}
+textarea {
+    height: 140px;
+    margin-bottom:0;
+}
+
+input:active, textarea:active {
+    box-shadow: 0 1px 2px rgba(36, 186, 159,0.1);
+}
+.form_img {
+    width: 100%;
+    height: 180px;
+    background-image: url('../images/red_chair.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #24ba9f;
+    background-color: white;
+    -webkit-appearance: none;
+}
+
+input[type=checkbox]:checked {
+    background-image: url('../images/form_ok.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form_right span {
+    font-size: 1.2rem;
+    color: gray;
+    padding-left: 15px;
+    margin-bottom: 15px;
     display: inline-block;
+    width: 80%;
+}
+
+input[type=submit] {
+    font-size: 1.5rem;
+    width: 100%;
+    line-height: 2.5rem;
+    padding: 5px;
+    display: block;
+    background-color: #24ba9f;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: white;
+    height: 80px;
+}
+.copyright {
+    display: inline-block;
+    height: 80px;
+}
+
+.copyright span {
+    line-height: 80px;
+}
+.footer_icon {
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.icons {
+    display: inline-block;
+}
+
+.footer_logo {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer_logo> span {
+    line-height: 80px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
