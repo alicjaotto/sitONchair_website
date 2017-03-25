@@ -255,7 +255,9 @@ nav ul.submenu span:after {
     line-height: 16px;
     margin-bottom: 15px;
 }
-
+.product_img_box>.description:hover {
+    display: none;
+}
 /* SECTION OFFER */
 #offer {
     background-color: hsl(0, 0%, 95%);
@@ -371,7 +373,7 @@ nav ul.submenu span:after {
     line-height: 30px;
     font-size: 1.2rem;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 5%;
     position: absolute;
     right: 35%;
@@ -531,7 +533,7 @@ input[type=submit] {
 footer {
     width: 100%;
     background-color: white;
-    height: 80px;
+    height: 100px;
 }
 .copyright {
     display: inline-block;
@@ -540,10 +542,11 @@ footer {
 
 .copyright span {
     line-height: 80px;
+    color: gray;
 }
 .footer_icon {
-    height: 22px;
-    width: 22px;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     margin: 5px;
     margin-top: 15px;
@@ -551,15 +554,21 @@ footer {
 
 .icons {
     display: inline-block;
+    margin-top: 10px;
 }
 
 .footer_logo {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
-.footer_logo> span {
-    line-height: 80px;
+.footer_logo a {
+    line-height: 70px;
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-weight: 500;
+    color: gray;
+}
+
+.footer_logo span {
+    font-weight: 700;
 }
