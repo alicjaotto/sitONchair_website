@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     //application
-    //dropdown lists
+    //variables in dropdown lists
     var models = document.querySelectorAll(".models li"); //array
     console.log(models);
     var colors = document.querySelectorAll(".colors li"); //array
@@ -134,14 +134,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var listLabels = document.querySelectorAll(".list_label");
 
+    //variables in the summary
     var modelsPrice = 0;
     var fabricsPrice = 0;
     var colorsPrice = 0;
-    var sum = modelsPrice+fabricsPrice+colorsPrice;
+    var sum = 0;
     var total = document.querySelector(".sum strong");
     total.innerText = sum +"$";
 
-    var showModel = document.querySelector("");
+    var showModel = document.querySelector(".panel_left > h4");
+    var showColor = document.querySelector(".color");
+    var showFabric = document.querySelector(".pattern");
+
+    var showModelPrice = document.querySelector(".panel_right > h4");
+    var showColorPrice = document.querySelector(".color_value");
+    var showFabricPrice = document.querySelector(".pattern_value");
 
     //events in models list
     listArrows[0].addEventListener("click", function(event) {
@@ -151,11 +158,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for (var i=0; i<models.length; i++) {
         models[i].addEventListener("click", function(event) {
+
             listLabels[0].innerText=this.innerText;
             showModel.innerText=this.innerText;
-            modelsPrice = this.dataset.price;
-        });
+            showModelPrice.innerText = this.dataset.price;
 
+            modelsPrice = Number(this.dataset.price);
+            sum += modelsPrice;
+            total.innerText = sum+"$";
+        });
     }
 
     //events in colors list
@@ -163,6 +174,18 @@ document.addEventListener("DOMContentLoaded", function(){
                     listPanels[1].classList.toggle("show");
 
     });
+    for (var i=0; i<colors.length; i++) {
+        colors[i].addEventListener("click", function(event) {
+
+            listLabels[1].innerText=this.innerText;
+            showColor.innerText=this.innerText;
+            showColorPrice.innerText = this.dataset.price;
+
+            colorsPrice = Number(this.dataset.price);
+            sum += colorsPrice;
+            total.innerText = sum+"$";
+        });
+    }
 
     //events in fabrics list
     listArrows[2].addEventListener("click", function(event) {
@@ -170,5 +193,43 @@ document.addEventListener("DOMContentLoaded", function(){
 
     });
 
+    for (var i=0; i<fabrics.length; i++) {
+        fabrics[i].addEventListener("click", function(event) {
+
+            listLabels[2].innerText=this.innerText;
+            showFabric.innerText=this.innerText;
+            showFabricPrice.innerText = this.dataset.price;
+
+            fabricsPrice = Number(this.dataset.price);
+            sum += fabricsPrice;
+            total.innerText = sum+"$";
+        });
+    }
+
+    //events in transport checkbox
+    var checkbox = document.getElementById("transport");
+    // console.log(checkbox);
+    var showTransport = document.querySelector(".transport");
+    // console.log(showTransport);
+    var showTransportPrice = document.querySelector(".transport_value");
+    // console.log(showTransportPrice);
+    var transportPrice = 0;
+
+    checkbox.addEventListener("change", function(event) {
+        transportPrice = Number(checkbox.dataset.transportprice);
+            if (checkbox.checked) {
+                showTransport.innerText = "Shipping";
+                showTransportPrice.innerText = checkbox.dataset.transportprice;
+                sum += transportPrice ;
+
+            } else {
+                showTransport.innerText = "";
+                showTransportPrice.innerText = "";
+                sum -= transportPrice ;
+
+            }
+        total.innerText = sum +"$";
+
+    });
 
 });

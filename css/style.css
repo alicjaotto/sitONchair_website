@@ -305,6 +305,7 @@ nav ul.submenu span:after {
 .product_frame p {
     line-height: 16px;
     margin-bottom: 15px;
+    color: grey;
 }
 /*.product_img_box>.description:hover {
     display: none;
@@ -546,7 +547,7 @@ nav ul.submenu span:after {
   padding-left: 50px;
   position: relative;
   font-size: 1.6rem;
-  color: #cecece;
+  color: grey;
   line-height: 120%;
   padding-top: 8px;
   cursor: pointer;
@@ -591,15 +592,6 @@ nav ul.submenu span:after {
   margin-top: 110px;
   margin-left: 25px;
 }
-
-/*
-#application .green_bell {
-  background-color: #24baa0;
-  width: 200px;
-  height: 6px;
-  display: inline-block;
-  margin: 5px 0 5px 0;
-}*/
 
 .summary_panel {
   background-color: white;
@@ -676,6 +668,7 @@ nav ul.submenu span:after {
   width: 100px;
   text-align: right;
   margin-top: 10px;
+  margin-left: 130px;
   font-size: 1.6rem;
   color: #24baa0;
 }
@@ -719,11 +712,6 @@ nav ul.submenu span:after {
   cursor: pointer;
   color: #27c7ab;
  }
-
-
-.title {
-  height: 30px;
-}
 
 .show {
     display: block;
@@ -780,6 +768,28 @@ textarea {
 input:active, textarea:active {
     box-shadow: 0 1px 2px rgba(36, 186, 159,0.1);
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 1.5rem;
+    color: #e2e2e2;
+    font-family: Arial, Tahoma, sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-size: 1.5rem;
+    color: #e2e2e2;
+    font-family: Arial, Tahoma, sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: 1.5rem;
+    color: #e2e2e2;
+    font-family: Arial, Tahoma, sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-size: 1.5rem;
+    color: #e2e2e2;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
 .form_img {
     width: 100%;
     height: 180px;
